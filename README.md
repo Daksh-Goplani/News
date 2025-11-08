@@ -1,5 +1,5 @@
 # News Website
-Show All News categorized \n
-Have Latest News \n
-Made with React and Bootstrap and newsapi \n
+Show All News categorized,
+Have Latest News,
+Made with React and Bootstrap and newsapi
 
