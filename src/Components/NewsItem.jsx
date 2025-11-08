@@ -2,13 +2,16 @@ import React from "react";
 import image from "../assets/news.jpg";
 
 const NewsItem = ({ title, description, src, url }) => {
+  console.log(src);
+  
   return (
     <div className="card shadow-lg border-0 rounded-4 overflow-hidden" style={{ width: "100%", maxWidth: "360px" }}>
       <img
-        src={src ? src : image}
+        src={src || image}
         className="card-img-top"
         alt="news"
         style={{ height: "200px", objectFit: "cover" }}
+        onError={(e) => e.target.src = image}
       />
       <div className="card-body bg-light">
         <h5 className="card-title fw-semibold text-dark">

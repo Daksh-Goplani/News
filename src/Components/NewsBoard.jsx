@@ -7,7 +7,8 @@ const NewsBoard = ({ category }) => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`;
+    // const url1 = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`;
+    const url = `https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&country=us&apikey=${import.meta.env.VITE_API_KEY}`;
     fetch(url)
       .then((response) => response.json())
       .then((data) => setArticles(data.articles || []));
@@ -25,7 +26,7 @@ const NewsBoard = ({ category }) => {
             <NewsItem
               title={news.title}
               description={news.description}
-              src={news.urlToImage}
+              src={news.image}
               url={news.url}
             />
           </div>
