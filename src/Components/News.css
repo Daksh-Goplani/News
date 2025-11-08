@@ -1,0 +1,12 @@
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  border-bottom: 3px solid #0d6efd;
+}
